@@ -1,9 +1,16 @@
 import retriveBarCodeService from "../services/retriveBarCode.service";
+import retriveBarCodeDealershipService from "../services/retriveBarCodeDealership.service";
 
 const retriveBarCodeController = (req, res) => {
-  const barCode = req.barcode;
+  let barcode = "";
 
-  const barcode = retriveBarCodeService(barCode);
+  if (req.barcode) {
+    barcode = retriveBarCodeService(req.barcode);
+  }
+
+  if (req.barcodeDealership) {
+    barcode = retriveBarCodeDealershipService(req.barcodeDealership);
+  }
 
   return res.json(barcode);
 };
