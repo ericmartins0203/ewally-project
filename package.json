@@ -15,5 +15,6 @@
     "jest": "^28.1.1",
     "nodemon": "^2.0.15",
     "supertest": "^6.2.3"
-  }
+  },
+  "type": "module"
 }
