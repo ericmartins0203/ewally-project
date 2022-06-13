@@ -1,8 +1,6 @@
 const expireDate = (lineDigit) => {
   const expireDate = lineDigit.slice(33, 37);
 
-  console.log(expireDate);
-
   if (expireDate == "0000") {
     return "there is no expiration date";
   }
